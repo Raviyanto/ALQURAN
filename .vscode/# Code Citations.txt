@@ -1,0 +1,37 @@
+# Code Citations
+
+## License: unknown
+https://github.com/AbhilashImaginea/Calculator/tree/5ff74bf308a28a3dce5fd32f15a4d3c44753747e/Calculator/Calculator.js~
+
+```
+7", "8", "9", "/",
+    "4", "5", "6", "*",
+    "1", "2", "3", "-",
+    "C", "0",
+```
+
+
+## License: LGPL_2_1
+https://github.com/Harol003/Java_GUI/tree/cd70d30294b604c47d559da7a42162263e8d0ca6/README.md
+
+```
+"9", "/",
+    "4", "5", "6", "*",
+    "1", "2", "3", "-",
+    "C", "0", "=", "+"
+```
+
+
+## License: Apache_2_0
+https://github.com/qishu321/python-lianxi/tree/adcc33eebd93eda30ed99ffda193b61059416e96/demo/jisuanqi.py
+
+```
+",
+    "4", "5", "6", "*",
+    "1", "2", "3", "-",
+    "C", "0", "=", "+"
+]
+
+row, col = 0
+```
+
