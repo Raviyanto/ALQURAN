@@ -46,82 +46,6 @@
 <meta content='#ff5722' name='apple-mobile-web-app-status-bar-style'/>
 <meta content='yes' name='apple-mobile-web-app-capable'/>
 
-
-
-
-<b:if cond='data:blog.pageType == &quot;item&quot;'>
-  <meta expr:content='data:post.title' property='og:title'/>
-  <meta expr:content='data:post.body' property='og:description'/>
-  <meta expr:content='data:post.url' property='og:url'/>
-  <meta expr:content='data:post.featuredImage' property='og:image'/>
-  <meta content='website' property='og:type'/>
-  <meta content='SiarKita.com' property='og:site_name'/>
-</b:if>
-
-
-
-
-<!-- Facebook and WhatsApp Meta Tag Open Graph by igniel.com -->
-<b:if cond='data:view.isHomepage'>
-<b:if cond='data:view.isPost'>
-<b:if cond='data:view.isPage'>
-<b:if cond='data:blog.url'>
-<meta expr:content='data:blog.url' property='og:url'/>
-</b:if>
-<meta expr:content='data:blog.title' property='og:site_name'/>
-<b:if cond='data:blog.pageName'>
-<meta expr:content='data:blog.pageName' property='og:title'/>
-</b:if></b:if></b:if></b:if>
-<meta content='blog' property='og:type'/>
-<b:if cond='data:blog.postImageUrl'>
-<meta expr:content='data:blog.postImageUrl' property='og:image'/>
-<b:else/>
-<b:if cond='data:blog.postImageThumbnailUrl'>
-<meta expr:content='data:blog.postThumbnailUrl' property='og:image'/>
-<b:else/>
-<meta content='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj86X4IPNmBfvOwzgIDmRhyphenhyphenqFgE9L3O0WBmcvdSvHOPvMRH98d7C0JnkzR0LGZ5RopTTdvC6tigxoWdhASit4P0IXOiCmYGAXFynNE0XXqmpoVWuS0D2jr5SbGqfEQ7rZAL-4gpM8tra7HTz098C4pF987RgMzsn6bj1v3n4L-TFjLqm37uXozBDuNLFvQ6/s245/Logo-Siar-Kita-Com.png' property='og:image'/>
-</b:if></b:if>
-<b:if cond='data:blog.metaDescription'>
-<meta expr:content='data:blog.metaDescription' property='og:description'/>
-<b:else/>
-<meta expr:content='data:post.snippet' property='og:description'/>
-</b:if>
-<meta expr:content='data:blog.title' property='og:site_name'/>
-<meta content='https://www.facebook.com/61578886774991' property='article:author'/>
-<meta content='https://www.facebook.com/61578886774991' property='article:publisher'/>
-<meta content='61578886774991' property='fb:admins'/>
-<meta content='id_ID' property='og:locale'/>
-<meta content='en_US' property='og:locale:alternate'/>
-<meta content='en_GB' property='og:locale:alternate'/>
-
- <!-- Twitter Card to show thumbnail -->
-<meta content='summary_large_image' name='twitter:card'/>
-<meta content='@glozoverscorner' name='twitter:site'/>
-<meta content='@glozoverscorner' name='twitter:creator'/>
-<b:if cond='data:view.isHomepage'>
-<b:if cond='data:view.isPost'>
-<b:if cond='data:view.isPage'>
-<meta expr:content='data:blog.title' name='twitter:title'/>
-<meta expr:content='data:blog.title' name='twitter:image:alt'/>
-<b:if cond='data:blog.pageName'>
-<meta expr:content='data:blog.pageName' name='twitter:title'/>
-<meta expr:content='data:blog.pageName' name='twitter:image:alt'/>
-</b:if></b:if></b:if></b:if>
-<b:if cond='data:blog.postImageUrl'>
-<meta expr:content='data:blog.postImageUrl' name='twitter:image'/>
-<b:else/>
-<b:if cond='data:blog.postImageThumbnailUrl'>
-<meta expr:content='data:blog.postThumbnailUrl' name='twitter:image'/>
-<b:else/>
-<meta content='data:blog.blogspotFaviconUrl' name='twitter:image'/>
-</b:if></b:if>
-<b:if cond='data:blog.metaDescription'>
-<meta expr:content='data:blog.metaDescription' name='twitter:description'/>
-<b:else/>
-<meta expr:content='data:post.snippet' name='twitter:description'/>
-</b:if>
-
-
 <include expiration='7d' path='*.css'/>
 <include expiration='7d' path='*.js'/>
 <include expiration='3d' path='*.gif'/>
@@ -150,18 +74,6 @@
 </b:if>
 </b:if>
 </b:if>
-
-<!-- Whatsapp -->
-<title><data:blog.pageName/></title> 
-<meta expr:content='data:post.snippet' name='description'/> 
-<meta expr:content='data:blog.pageTitle' property='og:title'/> 
-<meta expr:content='data:blog.canonicalUrl' property='og:url'/> 
-<meta expr:content='data:blog.metaDescription' property='og:description'/>
-<meta expr:content='data:blog.postImageUrl' property='og:image'/>
-
-<b:include data='blog' name='all-head-content'/>
-    <meta content='website' property='og:type'/>
-    <meta content='summary_large_image' name='twitter:card'/>
 
 <!-- Meta keywords otomatis homepage, static page, dan post -->
 <b:if cond='data:blog.pageType in {&quot;index&quot;} and data:blog.homepageUrl == data:blog.url'>
@@ -202,584 +114,6 @@ body#layout #columns1, body#layout #footer1 {float: left; width: 28%;}
 body#layout #columns2, body#layout #footer2 {float: left; width: 28%;}
 body#layout #columns3, body#layout #footer3 {float: right; width: 28%;}
 body#layout::before {content: "SiarKita v.1"; padding: 5px 10px; position: absolute; right: 20px; top: 20px; z-index: 1;}
-
-img { 
-max-width: 100%; 
-height: auto; 
-} 
-
-
-.fa {
-  padding: 10px;
-  font-size: 20px;
-  width: 20px;
-  text-align: center;
-  text-decoration: none;
-  margin: 5px 2px;
-  border-radius: 50%;
-}
-
-.fa:hover {
-    opacity: 0.7;
-}
-
-.fa-facebook {
-  background: #3B5998;
-  color: white;
-}
-
-.fa-twitter {
-  background: #55ACEE;
-  color: white;
-}
-
-
-.fa-youtube {
-  background: #bb0000;
-  color: white;
-}
-
-.fa-instagram {
-  background: #125688;
-  color: white;
-}
-
-.fa-rss {
-  background: #ff6600;
-  color: white;
-}
-
-
-.share{display:block;padding:0;margin:10px 0;}
-.post-share,ul.share-links{position:relative;margin:0;padding:0}
-.post-share{overflow:hidden;line-height:0;margin:0}.share-links li a,.share-links li a:before{float:left;text-align:center;line-height:32px}.share-links li{width:32px;float:left;box-sizing:border-box;margin:0 5px 0 0;list-style:none}.share-links li.facebook,.share-links li.gplus,.share-links li.twitter{width:20%}.share-links li a{display:inline-block;cursor:pointer;width:100%;height:32px;color:#fff;font-weight:400;font-size:13px;box-sizing:border-box;opacity:1;margin:0;padding:0;transition:all .17s ease}.is-mobile li.whatsapp-desktop,.share-links li.whatsapp-mobile{display:none}.is-mobile li.whatsapp-mobile{display:inline-block}.share-links li a:before{display:block;width:32px;background-color:rgba(255,255,255,.07);font-size:15px}.share-links li a:hover{opacity:.8}.social a:before{display:inline-block;font-family:FontAwesome;font-style:normal;font-weight:400}.social .facebook a:before{content:"\f09a"}.social .twitter a:before{content:"\f099"}.social .gplus a:before{content:"\f0d5"}.social .linkedin a:before{content:"\f0e1"}.social .pinterest a:before{content:"\f0d2"}.social .whatsapp a:before{content:"\f232"}.social .external-link a:before{content:"\f35d"}.social-color .facebook a{background-color:#3b5999}.social-color .twitter a{background-color:#00acee}.social-color .gplus a{background-color:#db4a39}.social-color .pinterest a{background-color:#ca2127}.social-color .linkedin a{background-color:#0077b5}.social-color .whatsapp a{background-color:#3fbb50}.social-color .external-link a{background-color:#111}.social-text .facebook a:after{content:"Facebook"}.social-text .twitter a:after{content:"Twitter"}.social-text .gplus a:after{content:"Google Plus"}.social-text .linkedin a:after{content:"LinkedIn"}.social-text .pinterest a:after{content:"Pinterest"}.social-text .whatsapp a:after{content:"Whatsapp"}.social-text .external-link a:after{content:"WebSite"}@media screen and (max-width:540px){.share-links li a span{display:none}.share-links li.facebook,.share-links li.gplus,.share-links li.twitter{width:30px}}
-
-.wa-button{color:#fff;margin:0 auto;padding:0;font-size:14px;font-weight:700} 
-.wa-button a{color:#fff;margin:0 auto;padding:10px 8px;background:# 4dc247} 
-.wa-button i{font-weight:400;margin:0 10px 0 0}
-
-/* split post ubah warna cari kode #f09800 */
-.postNav{display:flex;flex-wrap:wrap;justify-content:center; font-size:90%;line-height:20px; color:#fefefe; margin-top:30px;margin-bottom:0}
-.postNav > *{display:flex;align-items:center; padding:10px 13px;margin-bottom:10px; color:inherit;background-color:#f09800; border-radius:2px;text-decoration:none} .postNav > *:hover{opacity:.8}
-.postNav .current{background-color:rgba(0,0,0,.03); color:#989b9f}
-.postNav{font-size:13px; margin:50px 0} .postNav > *{padding:8px 15px;border-radius:2px;margin-bottom:8px} .postNav > *:not(:last-child){margin-right:8px}
-
-/* Page Navigation */
-.cm-pagenav{text-align:center;line-height:1.4em;margin:15px 0 30px 0;text-align:center;font-size:14px}.cm-pagenav span,.cm-pagenav a{background-color:#4e92df;box-shadow:0px 6px #4886ca;-moz-box-shadow:0px 6px #4886ca;-webkit-box-shadow:0px 6px #4886ca;-moz-transition:none;-webkit-transition:none;transition:none;display:inline-block;padding:10px 15px;margin-left:3px;margin-right:3px;vertical-align:middle;font-size:14px;color:#fff !important;text-decoration:none !important}.cm-pagenav .pages{background:#4e92df;color:#fff}.cm-pagenav .current,.cm-pagenav a:hover{top:4px;position:relative;box-shadow:0px 2px #4886ca;-moz-box-shadow:0px 2px #4886ca;-webkit-box-shadow:0px 2px #4886ca}.cm-pagenav a:active{top:6px;position:relative;box-shadow:none;-moz-box-shadow:none;-webkit-box-shadow:none}.cm-pagenav .pages{display:none}.cm-clearfix{clear:both}
-
-
-.post-content{display:none}.dblanter{font-size:130%;text-align:center}.paging .tombol,.paging:before{font-size:14px;padding:8px 12px}.paging{margin:20px auto;font-weight:bold;text-align:center;width:100%;font-family:Roboto,Arial,sans-serif}.paging .tombol{font-weight:700;background:#2196f3;border-radius:5px;display:inline-block;width:25px;color:#fff;margin-right:5px;transition:ease .69s!important}.tombol.blanter{background:#000}.paging:before{content:'PAGES : ';font-weight:Bold;border:1px solid #2196f3;color:#2196f3;border-radius:5px;margin-right:10px}@media screen and (max-width:768px){.paging .tombol,.paging:before{padding:8px 5px}}
-
-
-/* Label Cloud Style 3 */ .cloud-label-widget-content {text-align: left;} .label-size {background: #83B4D8;display: block;float: left;margin: 0 3px 3px 0;color: #fff;font-family: Oswald, Arial, Sans-Serif;font-size: 11px;text-transform: uppercase;} .label-size:nth-child(1) {background: #F86D9E;} .label-size:nth-child(2) {background: #37C371;} .label-size:nth-child(3) {background: #10BBEA;} .label-size:nth-child(4) {background: #25CBFE;} .label-size:nth-child(5) {background: #963690;} .label-size:nth-child(6) {background: #A3195C;} .label-size:nth-child(7) {background: #545454;} .label-size:nth-child(8) {background: #F2A15F;} .label-size:nth-child(9) {background: #00FF80;} .label-size:nth-child(10) {background: #B7860B;} .label-size:nth-child(11) {background: #99CC33;} .label-size:nth-child(12) {background: #FFFF3D;} .label-size:nth-child(13) {background: #3FDECF;} .label-size:nth-child(14) {background: #FF2F0A;} .label-size:nth-child(15) {background: #E9DB58;} .label-size:nth-child(16) {background: #42FFBD;} .label-size:nth-child(17) {background: #6899ED;} .label-size:nth-child(18) {background: #FF52AE;} .label-size:nth-child(19) {background: #8DBC2F;} .label-size:nth-child(20) {background: #80FF00;} .label-size a, .label-size span { display: inline-block; color: #fff !important; padding: 4px 10px; font-weight: bold; } .label-size:hover { background: #222; } .label-count { white-space: nowrap; padding-right: 3px; margin-left: -3px; background: #333; color: #fff ; } .label-size:hover .label-count, .label-size:focus+.label-count { background-color: #FF6BFF; }
-
-/* Struktur paragraf dan section agar rapi */
-.post-body p {
-  margin-bottom: 1em;
-  line-height: 1.6;
-}
-
-.post-body section {
-  margin-bottom: 2em;
-}
-
-/* Figcaption agar tidak dempet dengan gambar */
-.post-body figure {
-  margin-bottom: 1.5em;
-}
-
-.post-body figcaption {
-  font-style: italic;
-  font-size: 0.95em;
-  margin-top: 0.5em;
-  color: #555;
-}
-
-/* Blockquote agar tampil elegan */
-.post-body blockquote {
-  margin: 1em 0;
-  padding-left: 1em;
-  border-left: 3px solid #ccc;
-  font-style: italic;
-  color: #444;
-}
-
-}
-.post-title.entry-title a {
-  font-weight: bold !important;
-}
-
-/* [AUDIT: Aktivasi gaya italic untuk <em> dan <i> di post-body — 2025-08-15 by Mas Ravi] */
-.post-body em,
-.post-body i {
-  font-family: 'Roboto', sans-serif !important;
-  font-style: italic !important;
-  font-weight: 400 !important;
-}
-
-/* ✅ Logo header default (desktop) */
-.header-logo img {
-  max-width: 320px;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-}
-
-/* ✅ Responsif untuk layar kecil (mobile) */
-@media screen and (max-width: 600px) {
-  .header-logo img {
-    max-width: 220px;
-  }
-}
-
-/* ====== STYLE TABEL ====== */
-table {
-  border-collapse: collapse;
-  width: 100%;
-  margin: 1em 0;
-  font-family: Arial, sans-serif;
-}
-th, td {
-  border: 1px solid #000;
-  padding: 6px 10px;
-  text-align: center;
-}
-thead th {
-  background-color: #f2f2f2;
-}
-tbody tr:nth-child(even) {
-  background-color: #fafafa;
-}
-
-/* ====== STYLE HEADING H2 ====== */
-h2 {
-  font-weight: bold;           /* Huruf tebal */
-  margin-top: 1.2em;           /* Jarak atas */
-  margin-bottom: 0.6em;        /* Jarak bawah */
-  font-size: 1.5em;            /* Ukuran lebih besar */
-  font-family: Arial, sans-serif;
-}
-
-
-/* === Gaya tabel per label kategori === */
-
-/* SAINS */
-.post-label-sains table { border: 2px solid #2b8a3e; }
-.post-label-sains th, 
-.post-label-sains td { border: 1px solid #2b8a3e; }
-
-/* SIAR UTAMA */
-.post-label-siar-utama table { border: 2px solid #1d4ed8; }
-.post-label-siar-utama th, 
-.post-label-siar-utama td { border: 1px solid #1d4ed8; }
-
-/* BUDAYA */
-.post-label-budaya table { border: 2px solid #b45309; }
-.post-label-budaya th, 
-.post-label-budaya td { border: 1px solid #b45309; }
-
-/* VIDEO */
-.post-label-video table { border: 2px solid #dc2626; }
-.post-label-video th, 
-.post-label-video td { border: 1px solid #dc2626; }
-
-/* FOTO */
-.post-label-foto table { border: 2px solid #d97706; }
-.post-label-foto th, 
-.post-label-foto td { border: 1px solid #d97706; }
-
-/* TEKNOLOGI */
-.post-label-teknologi table { border: 2px solid #0f766e; }
-.post-label-teknologi th, 
-.post-label-teknologi td { border: 1px solid #0f766e; }
-
-/* SEHAT */
-.post-label-sehat table { border: 2px solid #15803d; }
-.post-label-sehat th, 
-.post-label-sehat td { border: 1px solid #15803d; }
-
-/* TOKOH */
-.post-label-tokoh table { border: 2px solid #6b21a8; }
-.post-label-tokoh th, 
-.post-label-tokoh td { border: 1px solid #6b21a8; }
-
-/* === Gaya umum untuk semua label di atas === */
-.post-label-sains section,
-.post-label-siar-utama section,
-.post-label-budaya section,
-.post-label-video section,
-.post-label-foto section,
-.post-label-teknologi section,
-.post-label-sehat section,
-.post-label-tokoh section { margin: 1.25rem 0; }
-
-.post-label-sains h2, .post-label-sains h3,
-.post-label-siar-utama h2, .post-label-siar-utama h3,
-.post-label-budaya h2, .post-label-budaya h3,
-.post-label-video h2, .post-label-video h3,
-.post-label-foto h2, .post-label-foto h3,
-.post-label-teknologi h2, .post-label-teknologi h3,
-.post-label-sehat h2, .post-label-sehat h3,
-.post-label-tokoh h2, .post-label-tokoh h3 {
-  margin: 0.25rem 0 0.75rem;
-  line-height: 1.3;
-}
-
-.post-label-sains p,
-.post-label-siar-utama p,
-.post-label-budaya p,
-.post-label-video p,
-.post-label-foto p,
-.post-label-teknologi p,
-.post-label-sehat p,
-.post-label-tokoh p {
-  line-height: 1.7;
-  margin: 0.5rem 0 1rem;
-}
-
-.post-label-sains ul,
-.post-label-siar-utama ul,
-.post-label-budaya ul,
-.post-label-video ul,
-.post-label-foto ul,
-.post-label-teknologi ul,
-.post-label-sehat ul,
-.post-label-tokoh ul {
-  margin: 0.25rem 0 1rem 1.2rem;
-}
-
-.post-label-sains ul li,
-.post-label-siar-utama ul li,
-.post-label-budaya ul li,
-.post-label-video ul li,
-.post-label-foto ul li,
-.post-label-teknologi ul li,
-.post-label-sehat ul li,
-.post-label-tokoh ul li {
-  margin: 0.25rem 0;
-}
-
-.post-label-sains .table-wrap,
-.post-label-siar-utama .table-wrap,
-.post-label-budaya .table-wrap,
-.post-label-video .table-wrap,
-.post-label-foto .table-wrap,
-.post-label-teknologi .table-wrap,
-.post-label-sehat .table-wrap,
-.post-label-tokoh .table-wrap {
-  margin: 0.75rem 0 1rem;
-  overflow-x: auto;
-}
-
-.post-label-sains table,
-.post-label-siar-utama table,
-.post-label-budaya table,
-.post-label-video table,
-.post-label-foto table,
-.post-label-teknologi table,
-.post-label-sehat table,
-.post-label-tokoh table {
-  width: 100%;
-  border-collapse: collapse;
-}
-
-.post-label-sains th, .post-label-sains td,
-.post-label-siar-utama th, .post-label-siar-utama td,
-.post-label-budaya th, .post-label-budaya td,
-.post-label-video th, .post-label-video td,
-.post-label-foto th, .post-label-foto td,
-.post-label-teknologi th, .post-label-teknologi td,
-.post-label-sehat th, .post-label-sehat td,
-.post-label-tokoh th, .post-label-tokoh td {
-  padding: 0.5rem 0.6rem;
-  text-align: center;
-}
-
-thead th { background: #f6f6f6; font-weight: 600; }
-tbody tr:nth-child(even) { background: #fafafa; }
-
-.note { font-size: 0.95rem; color: #444; margin-top: 0.5rem; }
-aside.note { border-left: 3px solid #999; padding: 0.75rem 1rem; background: #f9f9f9; }
-
-
-/* Base style semua kategori */
-.post-feature figcaption {
-  font-size: 0.9rem;
-  text-align: left;
-  margin-top: 0.5rem;
-  line-height: 1.4;
-  padding: 0.3rem 0;
-  transition: all 0.3s ease; /* Transisi lembut */
-}
-
-/* Sains */
-.label-Sains .post-feature figcaption,
-.label-Sains table {
-  border-color: #1565c0;
-  color: #1565c0;
-}
-.label-Sains .post-feature figcaption:hover {
-  background: #bbdefb;
-  color: #0d47a1;
-}
-
-/* Teknologi */
-.label-Teknologi .post-feature figcaption,
-.label-Teknologi table {
-  border-color: #00897b;
-  color: #00897b;
-}
-.label-Teknologi .post-feature figcaption:hover {
-  background: #b2dfdb;
-  color: #004d40;
-}
-
-/* Tokoh */
-.label-Tokoh .post-feature figcaption,
-.label-Tokoh table {
-  border-color: #6a1b9a;
-  color: #6a1b9a;
-}
-.label-Tokoh .post-feature figcaption:hover {
-  background: #e1bee7;
-  color: #4a148c;
-}
-
-/* Budaya */
-.label-Budaya .post-feature figcaption,
-.label-Budaya table {
-  border-color: #ef6c00;
-  color: #ef6c00;
-}
-.label-Budaya .post-feature figcaption:hover {
-  background: #ffe0b2;
-  color: #bf360c;
-}
-
-/* Sehat */
-.label-Sehat .post-feature figcaption,
-.label-Sehat table {
-  border-color: #2e7d32;
-  color: #2e7d32;
-}
-.label-Sehat .post-feature figcaption:hover {
-  background: #c8e6c9;
-  color: #0b3d0b;
-}
-
-/* Video */
-.label-Video .post-feature figcaption,
-.label-Video table {
-  border-color: #c62828;
-  color: #c62828;
-}
-.label-Video .post-feature figcaption:hover {
-  background: #ffcdd2;
-  color: #880e4f;
-}
-
-/* ===== Base Fade-In Animation ===== */
-@keyframes fadeInImage {
-  0% {
-    opacity: 0;
-    transform: scale(1.03);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-/* ===== Aturan Global untuk Merapatkan Feature Image Pertama ===== */
-.post-body > .ratio-16x9:first-child {
-  margin-bottom: 0.5rem; /* jarak minimal ke paragraf berikutnya */
-}
-
-.post-body > .ratio-16x9:first-child + p {
-  margin-top: 0; /* hilangkan margin atas paragraf pertama */
-}
-
-/* ===== Kustomisasi Per Label ===== */
-
-/* Budaya */
-body.label-budaya .ratio-16x9:first-child {
-  margin-bottom: 0.75rem;
-}
-
-/* Sains */
-body.label-sains .ratio-16x9:first-child {
-  margin-bottom: 0.5rem;
-}
-
-/* Teknologi */
-body.label-teknologi .ratio-16x9:first-child {
-  margin-bottom: 0.5rem;
-}
-
-/* Tokoh */
-body.label-tokoh .ratio-16x9:first-child {
-  margin-bottom: 1rem;
-}
-
-/* Video */
-body.label-video .ratio-16x9:first-child {
-  margin-bottom: 0.25rem;
-}
-
-/* Sehat */
-body.label-sehat .ratio-16x9:first-child {
-  margin-bottom: 0.75rem;
-}
-
-
-@media screen and (max-width: 768px) {
-  /* Buka overflow agar item tidak terpotong */
-  #footer-wrapper {
-    overflow: visible;
-  }
-
-  /* Jadikan footer-menu fleksibel dan center */
-  .footer-menu {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 10px 0;
-  }
-
-  .footer-menu li {
-    float: none;
-    display: inline-flex;
-    align-items: center;
-    width: auto;
-    margin: 5px 10px;
-  }
-}
-
-/* — Tampilkan menu-widget sebagai bottom-nav di mobile — */
-@media only screen and (max-width: 767px) {
-  /* Pastikan wrapper menu tidak dikunci overflow */
-  #footer-wrapper,
-  .footer2 {
-    overflow: visible !important;
-  }
-
-  /* Tampilkan menu-widget sebagai fixed bottom bar */
-  .menu-widget {
-    display: block !important;
-    position: fixed;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: #ffffff;
-    padding: 8px 0;
-    box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.1);
-    z-index: 999;
-  }
-
-  /* Reset inline-styles UL agar flex berjalan */
-  .menu-widget ul {
-    display: flex !important;
-    justify-content: center !important;
-    gap: 12px !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    list-style: none !important;
-  }
-
-  /* Reset dan konsolidasikan styling link */
-  .menu-widget li {
-    float: none !important;
-    margin: 0 !important;
-  }
-  .menu-widget li a {
-    display: inline-block !important;
-    padding: 8px 12px !important;
-    color: #333 !important;
-    background: #f5f5f5 !important;
-    border-radius: 4px !important;
-    text-decoration: none !important;
-  }
-
-  /* Tambahan bottom padding pada konten utama agar tidak tertutup */
-  .post-outer,
-  .main-wrapper,
-  .content-wrapper {
-    padding-bottom: 60px !important;
-  }
-}
-
-/* === Default Related Block === */
-#relatedBlock {
-  border-top: 3px solid #444;
-  padding: 10px 15px;
-  margin-top: 20px;
-  background: #fafafa;
-  border-radius: 4px;
-  font-size: 0.95rem;
-}
-#relatedBlock h4 {
-  margin-top: 0;
-  font-weight: bold;
-}
-
-/* === Warna per Label === */
-
-/* 1. Tokoh */
-#relatedBlock[data-label="Tokoh"], #relatedBlock.label-Tokoh { border-color: #d35400; }
-h2[data-label="Tokoh"], h3[data-label="Tokoh"] { color: #d35400; }
-table[data-label="Tokoh"], table.label-Tokoh { border: 2px solid #d35400; }
-
-/* 2. Sains */
-#relatedBlock[data-label="Sains"], #relatedBlock.label-Sains { border-color: #2980b9; }
-h2[data-label="Sains"], h3[data-label="Sains"] { color: #2980b9; }
-table[data-label="Sains"], table.label-Sains { border: 2px solid #2980b9; }
-
-/* 3. Teknologi */
-#relatedBlock[data-label="Teknologi"], #relatedBlock.label-Teknologi { border-color: #27ae60; }
-h2[data-label="Teknologi"], h3[data-label="Teknologi"] { color: #27ae60; }
-table[data-label="Teknologi"], table.label-Teknologi { border: 2px solid #27ae60; }
-
-/* 4. Budaya */
-#relatedBlock[data-label="Budaya"], #relatedBlock.label-Budaya { border-color: #c0392b; }
-h2[data-label="Budaya"], h3[data-label="Budaya"] { color: #c0392b; }
-table[data-label="Budaya"], table.label-Budaya { border: 2px solid #c0392b; }
-
-/* 5. Sehat */
-#relatedBlock[data-label="Sehat"], #relatedBlock.label-Sehat { border-color: #16a085; }
-h2[data-label="Sehat"], h3[data-label="Sehat"] { color: #16a085; }
-table[data-label="Sehat"], table.label-Sehat { border: 2px solid #16a085; }
-
-/* 6. Video */
-#relatedBlock[data-label="Video"], #relatedBlock.label-Video { border-color: #8e44ad; }
-h2[data-label="Video"], h3[data-label="Video"] { color: #8e44ad; }
-table[data-label="Video"], table.label-Video { border: 2px solid #8e44ad; }
-
-/* === Tampilan Umum Tabel === */
-table {
-  border-collapse: collapse;
-  width: 100%;
-  margin: 15px 0;
-  font-size: 0.95rem;
-}
-table th, table td {
-  border: 1px solid currentColor;
-  padding: 6px 8px;
-  text-align: left;
-}
-table th {
-  background-color: rgba(0,0,0,0.05);
-  font-weight: bold;
-}
-
-/* === Feature Image === */
-.post-feature img, .feature-image img {
-  width: 100%;
-  height: auto;
-  border-radius: 6px;
-  display: block;
-  margin-bottom: 15px;
-}
-
 
 */]]></b:skin>
 
@@ -908,75 +242,6 @@ var relatedSimply = new Array(); var relatedSimplyNum = 0; var relatedUrls = new
 </b:if>
 
 
-
-
-
-
-<b:if cond='data:blog.pageType == &quot;item&quot;'>
-<style type='text/css'>
-.mobileshare{text-align:center}
-.mobileshare a{background:#3a579a;color:#fff;display:inline-block;font-size:20px;width:35px;height:35px;line-height:35px;margin:0 2px 6px 0;border-radius:50%}
-.mobileshare a:hover{background:#314a83}
-.mobileshare1{text-align:center}
-.mobileshare1 a{background:#df4a32;color:#fff;display:inline-block;font-size:20px;width:35px;height:35px;line-height:35px;margin:0 2px 6px;border-radius:50%}
-.mobileshare1 a:hover{background:#be3f2b}
-.mobileshare2{text-align:center}
-.mobileshare2 a{background:#00abf0;color:#fff;display:inline-block;font-size:20px;width:35px;height:35px;line-height:35px;margin:0 2px 6px;border-radius:50%}
-.mobileshare2 a:hover{background:#0092cc}
-.mobileshare3{text-align:center}
-.mobileshare3 a{background:#cd1c1f;color:#fff;display:inline-block;font-size:20px;width:35px;height:35px;line-height:35px;margin:0 2px 6px;border-radius:50%}
-.mobileshare3 a:hover{background:#ae181a}
-.mobileshare5{text-align:center}
-.mobileshare5 a{background:#34af23;color:#fff;display:inline-block;font-size:20px;width:35px;height:35px;line-height:35px;margin:0 2px 6px;border-radius:50%}
-.mobileshare5 a:hover{background:#222}
-</style>
- </b:if>
- 
-<b:if cond='data:view.isHomepage'>
-<meta content='website' property='og:type'/>
-</b:if>
-<b:if cond='data:view.isSingleItem'>
-<meta content='article' property='og:type'/>
-</b:if>
-<b:if cond='data:view.isMultipleItems and not data:view.isHomepage'>
-<meta content='object' property='og:type'/>
-</b:if>
-<!-- Open Graph Meta Tags -->
-<meta expr:content='data:view.title.escaped' property='og:title'/>
-<meta expr:content='data:blog.url.canonical' property='og:url'/>
-<meta expr:content='data:view.description.escaped' property='og:description'/>
-<meta expr:content='data:blog.title.escaped' property='og:site_name'/>
-<b:tag cond='data:view.isMultipleItems and data:widgets.Blog.first.posts[0].featuredImage' expr:content='data:widgets.Blog.first.posts[0].featuredImage' name='meta' property='og:image'/>
-<b:if cond='data:view.featuredImage'>
-<meta expr:content='data:view.featuredImage' property='og:image'/>
-<meta expr:content='data:view.featuredImage' name='twitter:image'/>
-</b:if>
-<b:if cond='data:view.isHomepage'>
-<meta expr:content='data:blog.title' property='og:title'/>
-</b:if>
-<b:if cond='data:view.isPost'>
-<meta expr:content='data:blog.pageName' property='og:title'/>
-</b:if>
-<b:if cond='data:blog.url == data:blog.homepageUrl'>
-<meta expr:content='data:blog.title' name='keywords'/>
-</b:if>
-<b:if cond='data:view.isPost'>
-<meta expr:content='data:blog.pageName' name='keywords'/>
-</b:if>
-<link expr:href='data:blog.url' hreflang='en' rel='alternate'/>
-<!-- Twitter Meta Tags -->
-<meta content='summary_large_image' name='twitter:card'/>
-<meta expr:content='data:view.title.escaped' name='twitter:title'/>
-<meta expr:content='data:blog.url.canonical' name='twitter:domain'/>
-<meta expr:content='data:view.description.escaped' name='twitter:description'/>
-<meta expr:content='data:view.description.escaped' name='twitter:creator'/>
-<meta content='en_US' property='og:locale'/>
-<meta content='en_GB' property='og:locale:alternate'/>
-<meta content='id_ID' property='og:locale:alternate'/>
-
-<script src='https://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js' type='text/javascript'/> 
-
-
 <!-- </head> -->
 
 &lt;/head&gt;&lt;!--<head/>--&gt;
@@ -1054,7 +319,7 @@ This site requires JavaScript. This message will only be visible if you have it 
                        <b:widget-setting name='useImage'>true</b:widget-setting>
                        <b:widget-setting name='shrinkToFit'>false</b:widget-setting>
                        <b:widget-setting name='imagePlacement'>REPLACE</b:widget-setting>
-                       <b:widget-setting name='displayWidth'>320</b:widget-setting>
+                       <b:widget-setting name='displayWidth'>450</b:widget-setting>
                      </b:widget-settings>
                      <b:includable id='main'>
 
@@ -1157,8 +422,14 @@ document.write(thisDay + ', ' + day + ' ' + months[month] + ' ' + year);
     <h2 class='title'><data:title/></h2>
   </b:if>
   <div class='widget-content'>
-    <data:content/>
-  </div>
+  <b:tag cond='data:link' expr:href='data:link' name='a'>
+        <img expr:alt='data:title' expr:height='data:height' expr:id='data:widget.instanceId + &quot;_img&quot;' expr:src='data:sourceUrl' expr:width='data:width'/>
+      </b:tag>
+      <br/>
+      <b:if cond='data:caption'>
+        <span class='caption'><data:caption/></span>
+      </b:if>
+    </div>
 
   <b:include name='quickedit'/>
 </b:includable>
@@ -1548,112 +819,7 @@ document.write(&quot;&lt;script src=\&quot;/feeds/posts/default/-/<data:content/
     <b:include data='post' name='comments'/>
   </b:if>
 </b:includable>
-                        <b:includable id='comments' var='post'>
-  <div class='comments' id='comments'>
-    <a name='comments'/>
-    <b:if cond='data:post.allowComments'>
-      <h4><data:post.commentLabelFull/>:</h4>
-
-      <b:if cond='data:post.commentPagingRequired'>
-        <span class='paging-control-container'>
-          <b:if cond='data:post.hasOlderLinks'>
-            <a expr:class='data:post.oldLinkClass' expr:href='data:post.oldestLinkUrl'><data:post.oldestLinkText/></a>
-              &#160;
-            <a expr:class='data:post.oldLinkClass' expr:href='data:post.olderLinkUrl'><data:post.olderLinkText/></a>
-              &#160;
-          </b:if>
-
-          <data:post.commentRangeText/>
-
-          <b:if cond='data:post.hasNewerLinks'>
-            &#160;
-            <a expr:class='data:post.newLinkClass' expr:href='data:post.newerLinkUrl'><data:post.newerLinkText/></a>
-            &#160;
-            <a expr:class='data:post.newLinkClass' expr:href='data:post.newestLinkUrl'><data:post.newestLinkText/></a>
-          </b:if>
-        </span>
-      </b:if>
-
-      <div expr:id='data:widget.instanceId + &quot;_comments-block-wrapper&quot;'>
-        <dl expr:class='data:post.avatarIndentClass' id='comments-block'>
-          <b:loop values='data:post.comments' var='comment'>
-            <dt expr:class='&quot;comment-author &quot; + data:comment.authorClass' expr:id='data:comment.anchorName'>
-              <b:if cond='data:comment.favicon'>
-                <img expr:src='data:comment.favicon' height='16px' style='margin-bottom:-2px;' width='16px'/>
-              </b:if>
-              <a expr:name='data:comment.anchorName'/>
-              <b:if cond='data:blog.enabledCommentProfileImages'>
-                <data:comment.authorAvatarImage/>
-              </b:if>
-              <b:if cond='data:comment.authorUrl'>
-                <a expr:href='data:comment.authorUrl' rel='nofollow'><data:comment.author/></a>
-              <b:else/>
-                <data:comment.author/>
-              </b:if>
-              <data:commentPostedByMsg/>
-            </dt>
-            <dd class='comment-body' expr:id='data:widget.instanceId + data:comment.cmtBodyIdPostfix'>
-              <b:if cond='data:comment.isDeleted'>
-                <span class='deleted-comment'><data:comment.body/></span>
-              <b:else/>
-                <p>
-                  <data:comment.body/>
-                </p>
-              </b:if>
-            </dd>
-            <dd class='comment-footer'>
-              <span class='comment-timestamp'>
-                <a expr:href='data:comment.url' title='comment permalink'>
-                  <data:comment.timestamp/>
-                </a>
-                <b:include data='comment' name='commentDeleteIcon'/>
-              </span>
-            </dd>
-          </b:loop>
-        </dl>
-      </div>
-
-      <b:if cond='data:post.commentPagingRequired'>
-        <span class='paging-control-container'>
-          <a expr:class='data:post.oldLinkClass' expr:href='data:post.oldestLinkUrl'>
-            <data:post.oldestLinkText/>
-          </a>
-          <a expr:class='data:post.oldLinkClass' expr:href='data:post.olderLinkUrl'>
-            <data:post.olderLinkText/>
-          </a>
-          &#160;
-          <data:post.commentRangeText/>
-          &#160;
-          <a expr:class='data:post.newLinkClass' expr:href='data:post.newerLinkUrl'>
-            <data:post.newerLinkText/>
-          </a>
-          <a expr:class='data:post.newLinkClass' expr:href='data:post.newestLinkUrl'>
-            <data:post.newestLinkText/>
-          </a>
-        </span>
-      </b:if>
-
-      <p class='comment-footer'>
-        <b:if cond='data:post.embedCommentForm'>
-          <b:if cond='data:post.allowNewComments'>
-            <b:include data='post' name='comment-form'/>
-          <b:else/>
-            <data:post.noNewCommentsText/>
-          </b:if>
-        <b:elseif cond='data:post.allowComments'/>
-          <a expr:href='data:post.addCommentUrl' expr:onclick='data:post.addCommentOnclick'><data:postCommentMsg/></a>
-        </b:if>
-      </p>
-    </b:if>
-    <b:if cond='data:showCmtPopup'>
-      <div id='comment-popup'>
-        <iframe allowtransparency='true' frameborder='0' id='comment-actions' name='comment-actions' scrolling='no'>
-        </iframe>
-      </div>
-    </b:if>
-
-  </div>
-</b:includable>
+                        
                         <b:includable id='feedLinks'>
   <b:if cond='data:blog.pageType != &quot;item&quot;'> <!-- Blog feed links -->
     <b:if cond='data:feedLinks'>
@@ -1991,20 +1157,16 @@ document.write(&quot;&lt;script src=\&quot;/feeds/posts/default/-/<data:content/
   </b:if>
 
 <b:if cond='data:blog.pageType == &quot;item&quot;'>
+ <div expr:id='&quot;post1&quot; + data:post.id'/>
+<div class='related-simplify'>
+<b:if cond='data:post.labels'>
+<b:loop values='data:post.labels' var='label'>
+<b:if cond='data:blog.pageType == &quot;item&quot;'>
+<script expr:src='&quot;/feeds/posts/default/-/&quot; + data:label.name + &quot;?alt=json-in-script&amp;callback=related_results_labels&amp;max-results=3&quot;' type='text/javascript'/>
 
-  <!-- 🌄 Feature Image -->
-  <b:if cond='data:post.featuredImage'>
-    <figure class='post-feature ratio-16x9'>
-      <img decoding='async' expr:alt='data:post.title' expr:src='resizeImage(data:post.featuredImage, 800, &quot;800:450&quot;)' expr:title='data:post.title' loading='lazy'/>
-    </figure>
   </b:if>
 
-  <!-- Blok Baca Juga dasar -->
-  <div class='related-simplify' expr:data-label='data:post.labels[0].name' id='relatedBlock'>
-
-    <b:if cond='data:post.labels'>
-      <b:loop values='data:post.labels' var='label2'>
-        <script expr:src='&quot;/feeds/posts/default/-/&quot; + data:label2.name + &quot;?alt=json-in-script&amp;callback=related_results_labels&amp;max-results=3&quot;' type='text/javascript'/>
+  
       </b:loop>
     </b:if>
     <h4>Baca Juga</h4>
@@ -2013,42 +1175,16 @@ document.write(&quot;&lt;script src=\&quot;/feeds/posts/default/-/<data:content/
       printRelatedLabels();
     </script>
   </div>
-
-  <!-- Penampung konten -->
-  <div expr:id='&quot;post1&quot; + data:post.id'/>
-  <div expr:id='&quot;post2&quot; + data:post.id'>
-    <data:post.body/>
-  </div>
-
-  <!-- JS pemotong paragraf + kelas multi&#8209;label -->
+<div expr:id='&quot;post2&quot; + data:post.id'><p><data:post.body/></p></div>
+>
   
 <script type='text/javascript'>
-//<![CDATA[
-(function(){
-  var p1 = document.getElementById("post1<data:post.id/>");
-  var p2 = document.getElementById("post2<data:post.id/>");
-  var related = document.getElementById("relatedBlock");
-  if(!p1 || !p2 || !related) return;
-
-  var PARAGRAF_SEBELUM = 2;
-  var closeP = "</" + "p>"; // aman
-
-  var parts = p2.innerHTML.split(closeP);
-  var total = parts.length - 1;
-
-  if(total >= PARAGRAF_SEBELUM){
-    var firstPart = parts.slice(0, PARAGRAF_SEBELUM).join(closeP) + closeP;
-    var secondPart = parts.slice(PARAGRAF_SEBELUM).join(closeP);
-    p1.innerHTML = firstPart;
-    p1.appendChild(related);
-    p2.innerHTML = secondPart;
-  } else {
-    p1.innerHTML = p2.innerHTML;
-    p1.appendChild(related);
-    p2.innerHTML = "";
-  }
-})();
-//]]>
+var obj0=document.getElementById(&quot;post1<data:post.id/>&quot;);
+var obj1=document.getElementById(&quot;post2<data:post.id/>&quot;);
+var s=obj1.innerHTML;
+var t=s.substr(0,s.length/1.5);
+var r=t.lastIndexOf(&quot;&lt;br&gt;&quot;);
+if(r&gt;0) {obj0.innerHTML=s.substr(0,r);obj1.innerHTML=s.substr(r+4);}
 </script>
 
 </b:if>
@@ -2071,14 +1207,11 @@ document.write(&quot;&lt;script src=\&quot;/feeds/posts/default/-/<data:content/
      </b:if>
       </h2>
 </b:if>
-<b:if cond='data:blog.pageType == &quot;item&quot;'>
-<b:include data='post' name='sharethis'/>
-</b:if>
+
 <data:post.body/>
 </b:if>
 <div class='clear'/> <!-- clear for photos floats -->
 </div>
-
 <b:if cond='data:blog.pageType == &quot;item&quot;'>
 <div class='clear'/>
 <div id='share-related'>
@@ -2096,9 +1229,17 @@ document.write(&quot;&lt;script src=\&quot;/feeds/posts/default/-/<data:content/
 
 
 </div>
+<div id='related-posts'>
+<script type='text/javascript'>//<![CDATA[
+  var ry='<h3>Berita Terkait</h3>';rn='<h3>&nbsp;&nbsp;&nbsp;No related post available</h3>';rcomment='comments';rdisable='disable comments';commentYN='no';
+var dw='';titles=new Array();titlesNum=0;urls=new Array();timeR=new Array();thumb=new Array();commentsNum=new Array();comments=new Array();function related_results_labels(c){for(var b=0;b<c.feed.entry.length;b++){var d=c.feed.entry[b];titles[titlesNum]=d.title.$t;for(var a=0;a<d.link.length;a++){if('thr$total' in d){commentsNum[titlesNum]=d.thr$total.$t+' '+rcomment}else{commentsNum[titlesNum]=rdisable};if(d.link[a].rel=="alternate"){urls[titlesNum]=d.link[a].href;timeR[titlesNum]=d.published.$t;if('media$thumbnail' in d){thumb[titlesNum]=d.media$thumbnail.url}else{thumb[titlesNum]='https://3.bp.blogspot.com/-x_mMtgFf6XE/VlhLxwdLekI/AAAAAAAAj3c/N7fRz1lbMSg/s1600/no-thumbnail.jpg'};titlesNum++;break}}}}function removeRelatedDuplicates(){var b=new Array(0);c=new Array(0);e=new Array(0);f=new Array(0);g=new Array(0);for(var a=0;a<urls.length;a++){if(!contains(b,urls[a])){b.length+=1;b[b.length-1]=urls[a];c.length+=1;c[c.length-1]=titles[a];e.length+=1;e[e.length-1]=timeR[a];f.length+=1;f[f.length-1]=thumb[a];g.length+=1;g[g.length-1]=commentsNum[a]}}urls=b;titles=c;timeR=e;thumb=f;commentsNum=g}function contains(b,d){for(var c=0;c<b.length;c++){if(b[c]==d){return true}}return false}function printRelatedLabels(a){var y=a.indexOf('?m=0');if(y!=-1){a=a.replace(/\?m=0/g,'')}for(var b=0;b<urls.length;b++){if(urls[b]==a){urls.splice(b,1);titles.splice(b,1);timeR.splice(b,1);thumb.splice(b,1);commentsNum.splice(b,1)}}var c=Math.floor((titles.length-1)*Math.random());var b=0;if(titles.length==0){dw+=rn}else{dw+=ry;dw+='<div class="clear"/></div><ul>';while(b<titles.length&&b<20&&b<maxresults){if(y!=-1){urls[c]=urls[c]+'?m=0'}if(commentYN=='yes'){comments[c]=' - '+commentsNum[c]}else{comments[c]=''};dw+='<div class="related-post"><a href="'+urls[c]+'" rel="dofollow"><img border="0" class="related-thumb" title="'+titles[c]+'" alt="'+titles[c]+'" src="'+thumb[c]+'"/><div class="related-post-title">'+titles[c]+'</div></a></div></div>';if(c<titles.length-1){c++}else{c=0}b++}dw+='</ul>'};urls.splice(0,urls.length);titles.splice(0,titles.length);document.getElementById('related-posts').innerHTML=dw};
+//]]></script>
+<b:loop values='data:post.labels' var='label'>
+<script expr:src='&quot;/feeds/posts/default/-/&quot; + data:label.name + &quot;?alt=json-in-script&amp;callback=related_results_labels&quot;' type='text/javascript'/>
+</b:loop>
+<script type='text/javascript'>var maxresults=6;removeRelatedDuplicates();printRelatedLabels(&#39;<data:post.url/>&#39;);</script>
 
 </div>
-
 
 <div class='clear'/>
 
@@ -2377,6 +1518,7 @@ document.write(&quot;&lt;script src=\&quot;/feeds/posts/default/-/<data:content/
 
     <div id='backlinks-container'>
     <div expr:id='data:widget.instanceId + &quot;_backlinks-container&quot;'>
+    <b:include cond='data:post.showBacklinks' data='post' name='backlinks'/>
     </div>
     </div>
   </div>
