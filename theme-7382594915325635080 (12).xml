@@ -263,9 +263,9 @@ This site requires JavaScript. This message will only be visible if you have it 
               <b:section class='side-menu' id='side-menu' maxwidgets='1' showaddelement='no'>
                 <b:widget id='HTML12' locked='false' title='Menu Atas' type='HTML'>
                   <b:widget-settings>
-                    <b:widget-setting name='content'><![CDATA[<div id="XMLThemesSideNav" class="sidenav">
-
-
+                    <b:widget-setting name='content'>
+				
+<![CDATA[<div id="XMLThemesSideNav" class="sidenav">
 <span class="closebtn">
   <a href="javascript:void(0)" onclick="closeSideNav()" title="Close Menu" aria-label="Tutup Menu">
     <svg width="24" height="24" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -295,7 +295,9 @@ This site requires JavaScript. This message will only be visible if you have it 
 <div class="border1menu"></div>
 <div class="border2menu"></div>
 <div class="border3menu"></div>
-</div>]]></b:widget-setting>
+</div>
+]]>
+</b:widget-setting>
                   </b:widget-settings>
                   <b:includable id='main'>
   <!-- only display title if it's non-empty -->
@@ -422,14 +424,8 @@ document.write(thisDay + ', ' + day + ' ' + months[month] + ' ' + year);
     <h2 class='title'><data:title/></h2>
   </b:if>
   <div class='widget-content'>
-  <b:tag cond='data:link' expr:href='data:link' name='a'>
-        <img expr:alt='data:title' expr:height='data:height' expr:id='data:widget.instanceId + &quot;_img&quot;' expr:src='data:sourceUrl' expr:width='data:width'/>
-      </b:tag>
-      <br/>
-      <b:if cond='data:caption'>
-        <span class='caption'><data:caption/></span>
-      </b:if>
-    </div>
+    <data:content/>
+  </div>
 
   <b:include name='quickedit'/>
 </b:includable>
